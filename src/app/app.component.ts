@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
       
       'plateCount': new FormControl(null,[Validators.required,this.count.bind(this)]),
       'email': new FormControl(null,[Validators.required,Validators.email]),
-      'bookingDate':new FormControl(null,[Validators.required,this.book.bind(this)]),
+      'bookingDate':new FormControl(null,[Validators.required]),
       'bookingName':new FormControl(null,Validators.required)
      
       
