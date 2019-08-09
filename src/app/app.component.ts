@@ -1,6 +1,8 @@
 import { Component,OnInit } from '@angular/core';
 
 import { FormGroup,FormControl,Validators,FormArray } from '@angular/forms';
+import{AppModel} from './app.model';
+
 
 
 @Component({
@@ -13,8 +15,19 @@ export class AppComponent implements OnInit {
    genders=['male','female'];
   signupForm:FormGroup;
  forbiddenUsernmae=['chris','anna'];
+ obj:AppModel;
+ constructor(){
+ this.obj=new AppModel();
+
+ //this.obj=new AppModel('','','','');
+ console.log(this.obj);
+
+ }
+ 
 
  ngOnInit(){
+  
+
    this.signupForm = new FormGroup({
       
       'plateCount': new FormControl(null,[Validators.required,this.count.bind(this)]),
@@ -49,6 +62,8 @@ book(control:FormControl):{[s:string]:boolean}{
 
 onSubmit(){
   console.log(this.signupForm);
+ console.log(this.obj);
+
 }
 
 

@@ -6,7 +6,7 @@
 
 <div class="form-group">
   <label for="bookingName">bookingName</label>
-  <select id="bookingName" class="form-control"formControlName="bookingName" >
+  <select id="bookingName" class="form-control"formControlName="bookingName" [(ngModel)]="obj.bookingName" >
       <option value="" disabled>Choose your city</option>
       <option value="Nyork">New York</option>
    </select>
@@ -14,14 +14,14 @@
 
 <div class="form-group">
   <label for="plateCount">plateCount</label>
-  <input type="text" id="plateCount" class="form-control"formControlName="plateCount" >
+  <input type="text" id="plateCount" class="form-control"formControlName="plateCount" [(ngModel)]="obj.plateCount" >
   <span *ngIf="!signupForm.get('plateCount').valid && signupForm.get('plateCount').touched">Plate count should be more than zero</span>
 </div>
 
 
 <div class="form-group" >
   <label for="email">Mail</label>
-  <input type="email" id="email" class="form-control" formControlName="email" >
+  <input type="email" id="email" class="form-control" formControlName="email" [(ngModel)]="obj.email" >
   <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">Please enter valid email</span>
  </div>
 
@@ -29,7 +29,7 @@
  
 <div class="form-group" >
   <label for="bookingDate">Booking Date</label>
-  <input type="date" id="bookingDate" class="form-control" formControlName="bookingDate" >
+  <input type="date" id="bookingDate" class="form-control" formControlName="bookingDate" [(ngModel)]="obj.bookingDate" >
   <span *ngIf="!signupForm.get('bookingDate').valid && signupForm.get('bookingDate').touched">Please enter vslid booked on</span>
  </div>
   
